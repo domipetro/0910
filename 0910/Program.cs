@@ -60,6 +60,25 @@
             }
             else { Console.WriteLine("A háromszög nem szerkeszthető!"); }
 
+            //8. feladat
+            Console.WriteLine("Írd le az első számot: ");
+            int a1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Írd le a második számot: ");
+            int b1 = int.Parse(Console.ReadLine());
+
+            
+            double szamtaniKozep = (a1 + b1) / 2;
+
+            
+            double mertenyiKozep = Math.Sqrt(a1 * b1);
+
+            
+            Console.WriteLine(szamtaniKozep);
+            Console.WriteLine(mertenyiKozep);
+
+            //9.feladat
+
+
         }
     }
 }
