@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             
-                F1();
+             /*   F1();
                 F2();
                 F3();
                 F4();
@@ -18,8 +18,12 @@
                 F11();
                 F12();
                 F13();
-                F14();
-            }
+                F14();*/
+                F15();
+                F16();
+                F17();
+                F18();
+        }
 
             static void F1() { Console.WriteLine("Hello world!"); }
 
@@ -185,7 +189,90 @@
                 Console.WriteLine($"Ívhossz: {Math.Round(ivhossz, 2)}");
                 Console.WriteLine($"Körszelet terület: {Math.Round(terulet, 2)}");
             }
+        static void F15()
+        {
+
+            Console.WriteLine("Adj meg egy pozitív egész számot: ");
+            int r = int.Parse(Console.ReadLine());
+            if(r < 1)
+            {
+                Console.WriteLine("Adj meg egy pozitív egész számot: ");
+                r = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 1; i <= r; i++)
+            {
+                Console.Write($"{i} ");
+            }
+            Console.WriteLine("\n");
 
         }
+        static void F16()
+        {
+
+            Console.WriteLine("Adj meg egy pozitív egész számot: ");
+            int r = int.Parse(Console.ReadLine());
+            if (r < 1)
+            {
+                Console.WriteLine("Adj meg egy pozitív egész számot: ");
+                r = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 1; i <= r; i++)
+            {
+                Console.WriteLine($"{i} ");
+            }
+
+        }
+        static void F17()
+        {
+
+            Console.WriteLine("Adj meg egy pozitív egész számot: ");
+            int r = int.Parse(Console.ReadLine());
+            if (r < 1)
+            {
+                Console.WriteLine("Adj meg egy pozitív egész számot: ");
+                r = int.Parse(Console.ReadLine());
+            }
+            Console.Write($"A(z) {r} osztói: ");
+            for (int i = 1; i <= r; i++)
+            {
+                
+                if (r % i  == 0) {
+                    Console.Write($"{i} ");
+                }
+                
+            }
+            Console.WriteLine("\n");
+        }
+
+        static void F18()
+        {
+
+            Console.WriteLine("Adj meg egy pozitív egész számot: ");
+            int r = int.Parse(Console.ReadLine());
+            if (r < 1)
+            {
+                Console.WriteLine("Adj meg egy pozitív egész számot: ");
+                r = int.Parse(Console.ReadLine());
+            }
+            int osszeg = 0;
+            Console.Write($"A(z) {r} osztóinak összege: ");
+            for (int i = 1; i <= r; i++)
+            {
+
+                if (r % i == 0)
+                {
+                    osszeg += i;
+                }
+
+            }
+            Console.WriteLine(osszeg);
+            
+
+            
+        }
+
+    }
     }
 
