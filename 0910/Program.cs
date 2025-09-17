@@ -4,197 +4,204 @@
     {
         static void Main(string[] args)
         {
-            
-             /*   F1();
-                F2();
-                F3();
-                F4();
-                F5();
-                F6();
-                F7();
-                F8();
-                F9();
-                F10();
-                F11();
-                F12();
-                F13();
-                F14();*/
-                F15();
-                F16();
-                F17();
-                F18();
+
+            /*   F1();
+               F2();
+               F3();
+               F4();
+               F5();
+               F6();
+               F7();
+               F8();
+               F9();
+               F10();
+               F11();
+               F12();
+               F13();
+               F14();
+               F15();
+               F16();
+               F17();
+               F18();
+            F19();
+            F20();
+            F21();
+            F22();
+            F23();
+            F24();*/
+            F25();
         }
 
-            static void F1() { Console.WriteLine("Hello world!"); }
+        static void F1() { Console.WriteLine("Hello world!"); }
 
-            static void F2()
+        static void F2()
+        {
+            string name = "Pisti";
+            Console.WriteLine($"Szia {name}!");
+        }
+
+        static void F3()
+        {
+            int number = 4;
+            Console.WriteLine(number * 2);
+        }
+
+        static void F4()
+        {
+            int a = 8;
+            int b = 4;
+            Console.WriteLine($"Összeg: {a + b}");
+            Console.WriteLine($"Különbség: {a - b}");
+            Console.WriteLine($"Szorzat: {a * b}");
+            Console.WriteLine($"Hányados: {a / b}");
+        }
+
+        static void F5()
+        {
+            int elso = 23;
+            int masodik = 32;
+            Console.WriteLine(elso > masodik ? elso : masodik);
+        }
+
+        static void F6()
+        {
+            int asd = 2, asd1 = 32, asd2 = 40;
+            if (asd < asd1 && asd < asd2) Console.WriteLine(asd);
+            else if (asd1 < asd && asd1 < asd2) Console.WriteLine(asd1);
+            else Console.WriteLine(asd2);
+        }
+
+        static void F7()
+        {
+            int a = 24, b = 10, c = 51;
+            if ((a + b > c) && (b + c > a) && (a + c > b))
+                Console.WriteLine("A háromszög szerkeszthető!");
+            else
+                Console.WriteLine("A háromszög nem szerkeszthető!");
+        }
+
+        static void F8()
+        {
+            Console.WriteLine("Írd le az első számot: ");
+            int a1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Írd le a második számot: ");
+            int b1 = int.Parse(Console.ReadLine());
+
+            double szamtaniKozep = (a1 + b1) / 2.0;
+            double mertenyiKozep = Math.Sqrt(a1 * b1);
+
+            Console.WriteLine($"Számtani közép: {szamtaniKozep}");
+            Console.WriteLine($"Mértani közép: {mertenyiKozep}");
+        }
+
+        static void F9()
+        {
+
+            Console.WriteLine("Add meg a másodfokú egyenlet együtthatóit (a, b, c):");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            int d = b * b - 4 * a * c;
+
+            if (d < 0)
+                Console.WriteLine("Az egyenletnek nincs valós megoldása.");
+            else
+                Console.WriteLine("Az egyenletnek van valós megoldása.");
+        }
+
+        static void F10()
+        {
+
+            Console.WriteLine("Add meg a másodfokú egyenlet együtthatóit (a, b, c):");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            int d = b * b - 4 * a * c;
+
+            if (d < 0)
             {
-                string name = "Pisti";
-                Console.WriteLine($"Szia {name}!");
+                Console.WriteLine("Nincs valós megoldás.");
             }
-
-            static void F3()
+            else if (d == 0)
             {
-                int number = 4;
-                Console.WriteLine(number * 2);
+                int x = -b / (2 * a);
+                Console.WriteLine($"Egy megoldás van: x = {x}");
             }
-
-            static void F4()
+            else
             {
-                int a = 8;
-                int b = 4;
-                Console.WriteLine($"Összeg: {a + b}");
-                Console.WriteLine($"Különbség: {a - b}");
-                Console.WriteLine($"Szorzat: {a * b}");
-                Console.WriteLine($"Hányados: {a / b}");
+                double sqrtD = Math.Sqrt(d);
+                int x1 = (int)((-b + sqrtD) / (2 * a));
+                int x2 = (int)((-b - sqrtD) / (2 * a));
+                Console.WriteLine($"Két egész megoldás (kerekítve): x1 = {x1}, x2 = {x2}");
             }
+        }
 
-            static void F5()
-            {
-                int elso = 23;
-                int masodik = 32;
-                Console.WriteLine(elso > masodik ? elso : masodik);
-            }
+        static void F11()
+        {
 
-            static void F6()
-            {
-                int asd = 2, asd1 = 32, asd2 = 40;
-                if (asd < asd1 && asd < asd2) Console.WriteLine(asd);
-                else if (asd1 < asd && asd1 < asd2) Console.WriteLine(asd1);
-                else Console.WriteLine(asd2);
-            }
+            Console.WriteLine("Add meg a háromszög első befogóját: ");
+            int a = int.Parse(Console.ReadLine());
 
-            static void F7()
-            {
-                int a = 24, b = 10, c = 51;
-                if ((a + b > c) && (b + c > a) && (a + c > b))
-                    Console.WriteLine("A háromszög szerkeszthető!");
-                else
-                    Console.WriteLine("A háromszög nem szerkeszthető!");
-            }
+            Console.WriteLine("Add meg a háromszög második befogóját: ");
+            int b = int.Parse(Console.ReadLine());
 
-            static void F8()
-            {
-                Console.WriteLine("Írd le az első számot: ");
-                int a1 = int.Parse(Console.ReadLine());
+            double c = Math.Sqrt(a * a + b * b);
+            Console.WriteLine($"Az átfogó hossza: {Math.Round(c, 2)}");
+        }
 
-                Console.WriteLine("Írd le a második számot: ");
-                int b1 = int.Parse(Console.ReadLine());
+        static void F12()
+        {
 
-                double szamtaniKozep = (a1 + b1) / 2.0;
-                double mertenyiKozep = Math.Sqrt(a1 * b1);
+            Console.WriteLine("Add meg a téglatest 3 élét (a, b, c):");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
 
-                Console.WriteLine($"Számtani közép: {szamtaniKozep}");
-                Console.WriteLine($"Mértani közép: {mertenyiKozep}");
-            }
+            int felszin = 2 * (a * b + b * c + a * c);
+            int terfogat = a * b * c;
 
-            static void F9()
-            {
-                
-                Console.WriteLine("Add meg a másodfokú egyenlet együtthatóit (a, b, c):");
-                int a = int.Parse(Console.ReadLine());
-                int b = int.Parse(Console.ReadLine());
-                int c = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Felszín: {felszin}");
+            Console.WriteLine($"Térfogat: {terfogat}");
+        }
 
-                int d = b * b - 4 * a * c;
+        static void F13()
+        {
 
-                if (d < 0)
-                    Console.WriteLine("Az egyenletnek nincs valós megoldása.");
-                else
-                    Console.WriteLine("Az egyenletnek van valós megoldása.");
-            }
+            Console.WriteLine("Add meg a kör átmérőjét: ");
+            int d = int.Parse(Console.ReadLine());
 
-            static void F10()
-            {
-                
-                Console.WriteLine("Add meg a másodfokú egyenlet együtthatóit (a, b, c):");
-                int a = int.Parse(Console.ReadLine());
-                int b = int.Parse(Console.ReadLine());
-                int c = int.Parse(Console.ReadLine());
+            double r = d / 2.0;
+            double kerulet = 2 * Math.PI * r;
+            double terulet = Math.PI * r * r;
 
-                int d = b * b - 4 * a * c;
+            Console.WriteLine($"Kerület: {Math.Round(kerulet, 2)}");
+            Console.WriteLine($"Terület: {Math.Round(terulet, 2)}");
+        }
 
-                if (d < 0)
-                {
-                    Console.WriteLine("Nincs valós megoldás.");
-                }
-                else if (d == 0)
-                {
-                    int x = -b / (2 * a);
-                    Console.WriteLine($"Egy megoldás van: x = {x}");
-                }
-                else
-                {
-                    double sqrtD = Math.Sqrt(d);
-                    int x1 = (int)((-b + sqrtD) / (2 * a));
-                    int x2 = (int)((-b - sqrtD) / (2 * a));
-                    Console.WriteLine($"Két egész megoldás (kerekítve): x1 = {x1}, x2 = {x2}");
-                }
-            }
+        static void F14()
+        {
 
-            static void F11()
-            {
-               
-                Console.WriteLine("Add meg a háromszög első befogóját: ");
-                int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Add meg a sugár hosszát: ");
+            int r = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Add meg a háromszög második befogóját: ");
-                int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Add meg a középponti szöget fokban: ");
+            int szog = int.Parse(Console.ReadLine());
 
-                double c = Math.Sqrt(a * a + b * b);
-                Console.WriteLine($"Az átfogó hossza: {Math.Round(c, 2)}");
-            }
+            double ivhossz = 2 * Math.PI * r * szog / 360;
+            double terulet = Math.PI * r * r * szog / 360;
 
-            static void F12()
-            {
-               
-                Console.WriteLine("Add meg a téglatest 3 élét (a, b, c):");
-                int a = int.Parse(Console.ReadLine());
-                int b = int.Parse(Console.ReadLine());
-                int c = int.Parse(Console.ReadLine());
-
-                int felszin = 2 * (a * b + b * c + a * c);
-                int terfogat = a * b * c;
-
-                Console.WriteLine($"Felszín: {felszin}");
-                Console.WriteLine($"Térfogat: {terfogat}");
-            }
-
-            static void F13()
-            {
-               
-                Console.WriteLine("Add meg a kör átmérőjét: ");
-                int d = int.Parse(Console.ReadLine());
-
-                double r = d / 2.0;
-                double kerulet = 2 * Math.PI * r;
-                double terulet = Math.PI * r * r;
-
-                Console.WriteLine($"Kerület: {Math.Round(kerulet, 2)}");
-                Console.WriteLine($"Terület: {Math.Round(terulet, 2)}");
-            }
-
-            static void F14()
-            {
-                
-                Console.WriteLine("Add meg a sugár hosszát: ");
-                int r = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Add meg a középponti szöget fokban: ");
-                int szog = int.Parse(Console.ReadLine());
-
-                double ivhossz = 2 * Math.PI * r * szog / 360;
-                double terulet = Math.PI * r * r * szog / 360;
-
-                Console.WriteLine($"Ívhossz: {Math.Round(ivhossz, 2)}");
-                Console.WriteLine($"Körszelet terület: {Math.Round(terulet, 2)}");
-            }
+            Console.WriteLine($"Ívhossz: {Math.Round(ivhossz, 2)}");
+            Console.WriteLine($"Körszelet terület: {Math.Round(terulet, 2)}");
+        }
         static void F15()
         {
 
             Console.WriteLine("Adj meg egy pozitív egész számot: ");
             int r = int.Parse(Console.ReadLine());
-            if(r < 1)
+            if (r < 1)
             {
                 Console.WriteLine("Adj meg egy pozitív egész számot: ");
                 r = int.Parse(Console.ReadLine());
@@ -237,11 +244,12 @@
             Console.Write($"A(z) {r} osztói: ");
             for (int i = 1; i <= r; i++)
             {
-                
-                if (r % i  == 0) {
+
+                if (r % i == 0)
+                {
                     Console.Write($"{i} ");
                 }
-                
+
             }
             Console.WriteLine("\n");
         }
@@ -268,11 +276,142 @@
 
             }
             Console.WriteLine(osszeg);
-            
+            Console.WriteLine("\n");
 
-            
+
+
         }
 
+        static void F19()
+        {
+
+            Console.WriteLine("Adj meg egy pozitív egész számot: ");
+            int r = int.Parse(Console.ReadLine());
+            if (r < 1)
+            {
+                Console.WriteLine("Adj meg egy pozitív egész számot: ");
+                r = int.Parse(Console.ReadLine());
+            }
+            int osszeg = 0;
+            int szorzat = r * 2;
+
+            for (int i = 1; i <= r; i++)
+            {
+
+                if (r % i == 0)
+                {
+                    osszeg += i;
+                }
+
+
+            }
+
+            if (osszeg == szorzat)
+            {
+                Console.WriteLine($"A(z) {r} tökéletes szám, mivel osztóinak összege ({osszeg}) egyenlő a szám kétszeresével ({szorzat}).");
+            }
+            else
+            {
+                Console.WriteLine($"A(z) {r} nem tökéletes számmivel osztóinak összege ({osszeg}) nem egyenlő a szám kétszeresével ({szorzat}).");
+            }
+            Console.WriteLine("\n");
+
+        }
+        static void F20()
+        {
+
+            Console.WriteLine("Add meg a hatványalapot: ");
+            int r = int.Parse(Console.ReadLine());
+            Console.WriteLine("Add meg a kitevőt: ");
+            int t = int.Parse(Console.ReadLine());
+            double eredmeny = Math.Pow(r, t);
+            Console.WriteLine($"Hatványalap: {r}");
+            Console.WriteLine($"Kitevő: {t}");
+            Console.WriteLine($"Hatványérték: {eredmeny}");
+            Console.WriteLine("\n");
+        }
+        static void F21()
+        {
+            int szam = 0;
+
+            while (szam <= 0)
+            {
+                Console.Write("Adj meg egy pozitív számot: ");
+                 szam = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine($"A megadott szám: {szam}");
+        }
+        static void F22()
+        {
+            int osszeg = 0;
+            int szam = 0; 
+            while (szam < 10)
+            {
+                Console.Write("Adj meg egy pozitív számot: ");
+                szam = int.Parse(Console.ReadLine());
+                if (szam < 10) {
+                    osszeg += szam; }
+            }
+
+            Console.WriteLine($"A megadott számok összege: {osszeg}");
+        }
+        static void F23()
+        {
+            Console.Write("Kérek egy egész számot: ");
+            int szam = int.Parse(Console.ReadLine());
+
+            int eredeti = szam;
+            Console.Write($"{eredeti} = ");
+
+            
+            while (szam % 2 == 0)
+            {
+                Console.Write("2*");
+                szam = szam / 2;
+            }
+
+            
+            Console.WriteLine(szam);
+            Console.WriteLine("\n");
+        }
+        static void F24()
+        {
+            Console.Write("Kérek az alma szót: ");
+            string alma = Console.ReadLine();
+
+           
+
+
+            while (alma != "alma")
+            {
+                Console.WriteLine("Nem az alma szót írta!");
+                Console.Write("Kérek az alma szót: ");
+                 alma = Console.ReadLine();
+            }
+
+            Console.WriteLine("Az alma gyümölcs!");
+
+            
+            Console.WriteLine("\n");
+        }
+        static void F25()
+        {
+            Console.Write("Kérek egy egész számot: ");
+            int eredeti = int.Parse(Console.ReadLine());
+
+            int szam = eredeti;
+            int hanyados = 0;
+
+            while (szam >= 3)
+            {
+                szam = szam - 3;
+                hanyados = hanyados + 1;
+            }
+
+            
+            Console.WriteLine($"{eredeti} = {hanyados}*3+{szam}");
+        }
     }
-    }
+}
 
