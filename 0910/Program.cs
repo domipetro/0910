@@ -5,31 +5,37 @@
         static void Main(string[] args)
         {
 
-            /*   F1();
-               F2();
-               F3();
-               F4();
-               F5();
-               F6();
-               F7();
-               F8();
-               F9();
-               F10();
-               F11();
-               F12();
-               F13();
-               F14();
-               F15();
-               F16();
-               F17();
-               F18();
-            F19();
-            F20();
-            F21();
-            F22();
-            F23();
-            F24();*/
-            F25();
+                F1();
+                F2();
+                F3();
+                F4();
+                F5();
+                F6();
+                F7();
+                F8();
+                F9();
+                F10();
+                F11();
+                F12();
+                F13();
+                F14();
+                F15();
+                F16();
+                F17();
+                F18();
+                F19();
+                F20();
+                F21();
+                F22();
+                F23();
+                F24();
+                F25();
+                F26();
+                F27();
+                F28();
+                F29();
+                F30();
+                F31();
         }
 
         static void F1() { Console.WriteLine("Hello world!"); }
@@ -337,7 +343,7 @@
             while (szam <= 0)
             {
                 Console.Write("Adj meg egy pozitív számot: ");
-                 szam = int.Parse(Console.ReadLine());
+                szam = int.Parse(Console.ReadLine());
             }
 
             Console.WriteLine($"A megadott szám: {szam}");
@@ -345,13 +351,15 @@
         static void F22()
         {
             int osszeg = 0;
-            int szam = 0; 
+            int szam = 0;
             while (szam < 10)
             {
                 Console.Write("Adj meg egy pozitív számot: ");
                 szam = int.Parse(Console.ReadLine());
-                if (szam < 10) {
-                    osszeg += szam; }
+                if (szam < 10)
+                {
+                    osszeg += szam;
+                }
             }
 
             Console.WriteLine($"A megadott számok összege: {osszeg}");
@@ -364,14 +372,14 @@
             int eredeti = szam;
             Console.Write($"{eredeti} = ");
 
-            
+
             while (szam % 2 == 0)
             {
                 Console.Write("2*");
                 szam = szam / 2;
             }
 
-            
+
             Console.WriteLine(szam);
             Console.WriteLine("\n");
         }
@@ -380,19 +388,19 @@
             Console.Write("Kérek az alma szót: ");
             string alma = Console.ReadLine();
 
-           
+
 
 
             while (alma != "alma")
             {
                 Console.WriteLine("Nem az alma szót írta!");
                 Console.Write("Kérek az alma szót: ");
-                 alma = Console.ReadLine();
+                alma = Console.ReadLine();
             }
 
             Console.WriteLine("Az alma gyümölcs!");
 
-            
+
             Console.WriteLine("\n");
         }
         static void F25()
@@ -409,9 +417,173 @@
                 hanyados = hanyados + 1;
             }
 
-            
+
             Console.WriteLine($"{eredeti} = {hanyados}*3+{szam}");
+        }
+        static void F26()
+        {
+            Console.Write("Kérek egy egész számot: ");
+            int szam = int.Parse(Console.ReadLine());
+
+
+            int primszam = 0;
+
+            for (int i = 1; i <= szam; i++)
+            {
+                if (szam % i == 0)
+                {
+                    primszam++;
+                }
+
+            }
+            if (primszam == 2)
+            {
+                Console.WriteLine("A szám prím.");
+            }
+            else
+            {
+                Console.WriteLine("A szám nem prím.");
+            }
+
+
+
+        }
+
+        static void F27()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 2; i <= n; i++)
+            {
+                bool prim = true;
+
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        prim = false;
+                    }
+                }
+
+                if (prim)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        static void F28()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"A {n} prímosztói:");
+
+            for (int i = 2; i <= n; i++)
+            {
+
+                if (n % i == 0)
+                {
+
+                    bool prim = true;
+                    for (int j = 2; j < i; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            prim = false;
+                        }
+                    }
+
+                    if (prim)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+        }
+        static void F29()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int szam = n;
+            Console.Write($"{n} = ");
+
+            bool elso = true;
+
+            for (int i = 2; i <= szam; i++)
+            {
+                bool prim = true;
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        prim = false;
+                    }
+                }
+
+                if (prim)
+                {
+                    while (szam % i == 0)
+                    {
+                        if (!elso)
+                            Console.Write("*");
+                        Console.Write(i);
+                        elso = false;
+                        szam /= i;
+                    }
+                }
+            }
+        }
+        static void F30()
+        {
+            Console.WriteLine("Add meg az elso szamot: ");
+            int m = int.Parse(Console.ReadLine()!);
+
+            Console.WriteLine("Add meg a masodik szamot: ");
+            int n = int.Parse(Console.ReadLine()!);
+
+            int lnko = LNKO(m, n);
+            Console.WriteLine("LNKO: " + lnko); 
+            static int LNKO(int a, int b)
+        {
+            int r = a % b;
+            while (r != 0)
+            {
+                a = b;
+                b = r;
+                r = a % b;
+            }
+            return b;
+        } 
+        }
+
+       
+        static void F31()
+        {
+            Console.Write("Add meg az első számot: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("Add meg a második számot: ");
+            int b = int.Parse(Console.ReadLine());
+
+            
+            int eredetiA = a;
+            int eredetiB = b;
+            while (b != 0)
+            {
+                int t = b;
+                b = a % b;
+                a = t;
+            }
+            int lnko = a;
+
+            
+            int lkkt = (eredetiA / lnko) * eredetiB;
+
+            Console.WriteLine($"A legkisebb közös többszörös: {lkkt}");
         }
     }
 }
+
+
 
