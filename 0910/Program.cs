@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-                F1();
+            /*    F1();
                 F2();
                 F3();
                 F4();
@@ -35,7 +35,17 @@
                 F28();
                 F29();
                 F30();
-                F31();
+                F31();*/
+            F32();
+            F33();
+            F34();
+            F35();
+            F36();
+            F37();
+            F38();
+            F39();
+            F40();
+            F41();
         }
 
         static void F1() { Console.WriteLine("Hello world!"); }
@@ -582,8 +592,173 @@
 
             Console.WriteLine($"A legkisebb közös többszörös: {lkkt}");
         }
+
+    
+
+    
+        static void F32()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{n} * {i} = {n * i}");
+            }
+        }
+
+   
+        static void F33()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{n} + {i} = {n + i}");
+            }
+        }
+
+       
+        static void F34()
+        {
+            for (int x = 10; x < 100; x++)
+            {
+                for (int y = x + 1; y < 100; y++)
+                {
+                    int prod1 = x * y;
+
+                    int x1 = x / 10;
+                    int x2 = x % 10;
+                    int y1 = y / 10;
+                    int y2 = y % 10;
+
+                    int x_swapped = x2 * 10 + x1;
+                    int y_swapped = y2 * 10 + y1;
+
+                    if (x_swapped * y_swapped == prod1)
+                    {
+                        Console.WriteLine($"{x} * {y} = {prod1} == {x_swapped} * {y_swapped}");
+                    }
+                }
+            }
+        }
+
+        static void F35()
+        {
+            for (int i = 0; i < 13; i++)
+            {
+                char c1 = (char)('a' + i);
+                char c2 = (char)('a' + i + 13);
+
+                if (c2 > 'z') break;
+
+                Console.WriteLine($"{c1} {(int)c1}\t{c2} {(int)c2}");
+            }
+        }
+
+        
+        static void F36()
+        {
+            Console.Write("Sorok száma: ");
+            int rows = int.Parse(Console.ReadLine());
+            Console.Write("Oszlopok száma: ");
+            int cols = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    char ch = ((i + j) % 2 == 0) ? 'X' : 'O';
+                    Console.Write(ch);
+                }
+                Console.WriteLine();
+            }
+        }
+
+      
+        static void F37()
+        {
+            Console.Write("Add meg a sorok számát: ");
+            int a = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < a; i++)
+            {
+                int csillagok = 2 * i + 1;
+                Console.WriteLine(new string('*', csillagok));
+            }
+        }
+
+
+        static void F38()
+        {
+            Console.Write("Add meg a sorok számát: ");
+            int a = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < a; i++)
+            {
+                int space = a - i - 1;
+                int stars = 2 * i + 1;
+                Console.WriteLine(new string(' ', space) + new string('*', stars));
+            }
+        }
+
+      
+        static void F39()
+        {
+            Console.Write("Adj meg M-et (szélesség): ");
+            int m = int.Parse(Console.ReadLine());
+            Console.Write("Adj meg N-t (magasság): ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                if (i == 0 || i == n - 1)
+                {
+                    Console.WriteLine(new string('*', m));
+                }
+                else
+                {
+                    Console.WriteLine("*" + new string(' ', m - 2) + "*");
+                }
+            }
+        }
+
+
+        static void F40()
+        {
+            Console.Write("Adj meg egy számot: ");
+            int limit = int.Parse(Console.ReadLine());
+
+            for (int num = 2; num <= limit; num++)
+            {
+                int sum = 1;
+                for (int i = 2; i <= num / 2; i++)
+                {
+                    if (num % i == 0) sum += i;
+                }
+
+                if (sum == num)
+                {
+                    Console.WriteLine($"{num} tökéletes szám.");
+                }
+            }
+        }
+
+    
+        static void F41()
+        {
+            const string abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for (int i = 0; i < 26; i++)
+            {
+                string shifted = abc.Substring(i) + abc.Substring(0, i);
+                Console.WriteLine(shifted);
+            }
+        }
     }
+
 }
+
 
 
 
